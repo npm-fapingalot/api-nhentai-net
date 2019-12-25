@@ -6,7 +6,7 @@ describe('#getManga', () => {
 
     expect(manga).toBeDefined();
     expect(manga).toHaveProperty('id', 294567);
-    expect(manga).toHaveProperty('title', '(Nichirin Kitan 4) [HaraPan Power (Sakura Nobita)] Chloe Seiibutsu-ka Program (Fate/kaleid liner Prisma Illya)');
+    expect(manga).toHaveProperty('title', '[HaraPan Power (Sakura Nobita)] Chloe Seiibutsu-ka Program (Fate/kaleid liner Prisma Illya)');
     expect(manga).toHaveProperty('pageCount', 18);
   }, 20000000);
 });

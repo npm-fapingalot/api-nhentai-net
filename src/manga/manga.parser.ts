@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import * as SELECTOR from './manga.selectors';
 import * as URL from './manga.url';
 import { IManga, IPage, ITagged } from './manga.schema';
-import { sanitizeText, regexExtract, toInt, getParentText, emptyToNull } from '../utils.parse';
+import { sanitizeText, regexExtract, toInt, getParentText, emptyStringToNull } from '../utils.parse';
 import { ITag } from '../tag';
 
 // SELECTOR
@@ -28,7 +28,7 @@ export const getPages = ($: CheerioStatic): IPage[] =>
   $(SELECTOR.THUMBNAIL_IMAGES)
     .map((i, el) => $(el).attr('data-src'))
     .get()
-    .filter((val) => emptyToNull(val) !== null)
+    .filter((val) => emptyStringToNull(val) !== null)
     .map((thumbnailURL) => ({
       thumbnailURL,
       imgURL: [
@@ -88,7 +88,7 @@ export const getMangaFromCheerio = ($: CheerioStatic, id: number): IManga => {
   if (!coverURL) { throw new Error('Cover is null'); }
 
   const pages = getPages($);
-  if (pages.length !== pageCount) { throw new Error('Page count doesn\'t match pages'); }
+  if (pages.length !== pageCount) { throw new Error('Page count doesn\'t match pages ' + pages.length + '/' + pageCount); }
 
   return {
     id,
