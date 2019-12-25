@@ -25,7 +25,8 @@
     "coverage:integration": "npm run test:integration -- --coverage",
     "lint": "tslint --project tslint.json",
     "build": "tsc",
-    "clean": "rm -rf build coverage"
+    "clean": "rm -rf build coverage",
+    "doc": "typedoc"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.15",
@@ -35,6 +36,7 @@
     "jest": "^24.9.0",
     "ts-jest": "^24.2.0",
     "tslint": "^5.20.1",
+    "typedoc": "^0.15.5",
     "typescript": "^3.7.4"
   },
   "dependencies": {

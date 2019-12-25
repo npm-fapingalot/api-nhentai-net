@@ -4,6 +4,7 @@
 ### My Files ####
 build
 coverage
+docs
 
 ### Code ###
 .vscode/*
