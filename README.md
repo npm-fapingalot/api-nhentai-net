@@ -6,8 +6,6 @@ This library supports fetching:
 - List of Manga, 
 - tags/characters/parodies/catagories/groups/artists
 
-To install use  
-
 # Install
 ``` npm install --save api-nhentai-net ```
 
